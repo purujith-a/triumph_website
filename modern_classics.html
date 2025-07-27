@@ -1,0 +1,136 @@
+<!-- Modern Classics Bikes Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Classics Bikes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 20px;
+            max-width: 800px;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .bike-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 50px 0;
+            gap: 30px;
+        }
+
+        .bike-item {
+            text-align: center;
+            flex: 1;
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .bike-item img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bike-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-container {
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo" width="100"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <p class="description">
+        MODERN CLASSICS RANGE<br>
+        TIMELESS STYLE, MODERN PERFORMANCE<br>
+        Discover the perfect combination of iconic design and advanced engineering with the Modern Classics family.<br>
+        Precision craftsmanship, unparalleled riding experience, and a legacy reborn.<br><br>
+        WHICH WILL YOU CHOOSE?<br>
+        MODERN CLASSICS RANGE
+    </p>
+    
+    <div class="bike-container">
+        <div class="bike-item">
+            <img src="images/speed_twin.png" alt="SPEED TWIN 900">
+            <h2>SPEED TWIN 900</h2>
+            <p>Price From ₹ 2,41,780.00.</p>
+            <div class="btn-container">
+                <a href="details4.html" class="btn">View Details</a>
+                <a href="login.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div class="bike-item">
+            <img src="images/NEW_SPEED_T4.png" alt="NEW SPEED T4">
+            <h2>NEW SPEED T4</h2>
+            <p>Price From₹ 1,99,000.00</p>
+            <div class="btn-container">
+                <a href="details5.html" class="btn">View Details</a>
+                <a href="login.html" class="btn">Book Now</a>
+            </div>
+        </div>
+        
+        <div class="bike-item">
+            <img src="images/BONNEVILLE_BOBBER.png" alt="BONNEVILLE_BOBBER">
+            <h2>BONNEVILLE_BOBBER</h2>
+            <p>Price From 12,05,000.00.</p>
+            <div class="btn-container">
+                <a href="details6.html" class="btn">View Details</a>
+                <a href="login.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

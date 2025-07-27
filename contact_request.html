@@ -1,0 +1,120 @@
+<!-- Contact Request Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Request</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        .form-container {
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container h2 {
+            margin-bottom: 15px;
+        }
+
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function updateSubModels() {
+            const modelSelect = document.getElementById("model");
+            const subModelSelect = document.getElementById("sub-model");
+            
+            const subModels = {
+                "Adventure": ["Tiger 1200 GT Pro", "Tiger 1200 Rally Explorer", "Tiger 1200 Rally Pro"],
+                "Modern Classics": ["Speed Twin 900", "Thruxton RS", "Bonneville T120"],
+                "Roadster": ["Street Triple 765 R", "Speed Triple 1200 RS", "Trident 660"],
+                "Rocket": ["Rocket 3 R", "Rocket 3 GT", "Rocket 3 Storm"],
+                "Sport": ["Daytona Moto2 765", "Speed Triple 1200 RR"],
+                "Special Edition": ["Bonneville T120 Black", "Scrambler 1200 Steve McQueen", "Thruxton Final Edition"]
+            };
+            
+            const selectedModel = modelSelect.value;
+            
+            subModelSelect.innerHTML = "<option value=''>Select Sub-Model</option>";
+            if (subModels[selectedModel]) {
+                subModels[selectedModel].forEach(subModel => {
+                    let option = document.createElement("option");
+                    option.value = subModel;
+                    option.textContent = subModel;
+                    subModelSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo" width="100"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    
+    <div class="form-container">
+        <h2>Contact Request</h2>
+        <form id="contact-form" action="confirmation_page.html" method="get">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="state" placeholder="State" required>
+            
+            <select name="model" id="model" required onchange="updateSubModels()">
+                <option value="">Select Model</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Modern Classics">Modern Classics</option>
+                <option value="Roadster">Roadster</option>
+                <option value="Rocket">Rocket</option>
+                <option value="Sport">Sport</option>
+                <option value="Special Edition">Special Edition</option>
+            </select>
+            
+            <select name="sub-model" id="sub-model" required>
+                <option value="">Select Sub-Model</option>
+            </select>
+            
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

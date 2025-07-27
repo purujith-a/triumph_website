@@ -1,0 +1,90 @@
+<!-- Bike Details Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 20px;
+        }
+
+        .details-container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .details-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .details-container h2 {
+            margin-top: 15px;
+        }
+
+        .details-container p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo" width="100"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="details-container">
+        <img src="images/ROCKET_3_STORM_R.png" alt="Rocket 3 R">
+        <h2>Rocket 3 STORM R</h2>
+        <p>Price From ₹ 21,99,000.00</p>
+        <p>Engine: 2458 cc | Horsepower:182 PS / 180 bhp (134 kW) @ 7,000 rpm | Torque: 225 Nm (166lbft) @ 4,000 rpm</p>
+        <p>The Rocket 3 Storm R is in a class of its own. With muscular power and record-breaking levels of torque, the explosive acceleration is matched only by the phenomenal handling and immaculate premium finish..</p>
+        <div class="btn-container">
+            <a href="login.html" class="btn">Book Now</a>
+            <a href="signup.html" class="btn">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>

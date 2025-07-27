@@ -1,0 +1,133 @@
+<!-- Updated Models.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Models</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/triumphbg.jpeg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .models-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .models {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+            padding: 20px;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .model-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .model-item img {
+            width: 500px;
+            height: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+        }
+
+        .model-item img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .model-item p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo" width="100"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+    
+    <div class="models-container">
+        <div class="models">
+            <div class="model-item">
+                <a href="adventure.html"><img src="images/adventure.png" alt="Adventure"></a>
+                <p>Adventure</p>
+            </div>
+            <div class="model-item">
+                <a href="modern_classics.html"><img src="images/modernclassics.png" alt="Modern Classics"></a>
+                <p>Modern Classics</p>
+            </div>
+            <div class="model-item">
+                <a href="roadster.html"><img src="images/roadsters.png" alt="Roadster"></a>
+                <p>Roadster</p>
+            </div>
+            <div class="model-item">
+                <a href="rocket.html"><img src="images/rocket.png" alt="Rocket"></a>
+                <p>Rocket</p>
+            </div>
+            <div class="model-item">
+                <a href="sport.html"><img src="images/sport.png" alt="Sport"></a>
+                <p>Sport</p>
+            </div>
+            <div class="model-item">
+                <a href="specialedition.html"><img src="images/specialedition.png" alt="Special Edition"></a>
+                <p>Special Edition</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
